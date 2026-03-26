@@ -15,7 +15,7 @@ export default function Hero() {
             href="/register"
             className="inline-block bg-transparent text-white px-8 border-white  border py-4 rounded-lg text-lg font-medium  transition "
           >
-            Join the Program
+            Become A Member
           </Link>
         </div>
       </div>

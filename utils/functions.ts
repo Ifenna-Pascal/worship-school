@@ -7,15 +7,35 @@ export const generateRandomToken = () => {
 }
 
 export const emailExists = async (email: string, link: string) => {
+  try {
+    const res = await fetch(`${link}/search?email=${email}`);
     
-          fetch(`${link}/search?email=${email}`)
-         .then(async(emailFetch) => {
-                const isEmail = await emailFetch.json();
-        if (isEmail.length > 0) {
-            return 'email already registered';
-        }
-         } )
-         .catch((err) => console.log(err))
-    
- 
+    if (!res.ok) {
+      throw new Error(`API error: ${res.status}`);
+    }
+
+    const data = await res.json();
+
+    if (data.length > 0) {
+      return 'email already registered';
+    }
+
+    return null; 
+  } catch (err: any) {
+    console.error('emailExists error:', err);
+    throw err; 
+  }
 };
+
+export function copyToClipboard(text: string) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text);
+  } else {
+    const el = document.createElement("textarea");
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+  }
+}

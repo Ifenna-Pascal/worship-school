@@ -21,7 +21,7 @@ body {
 }
 
 .bg-image-with-overlay {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('/hero.jpg');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('/hero.jpg');
   background-size: cover;
 }
 

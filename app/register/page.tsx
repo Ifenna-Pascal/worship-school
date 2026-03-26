@@ -10,7 +10,7 @@ export default function RegisterPage() {
         Discover your rhythm, connect with fellow musicians, and showcase your talent every month.
       </p>
     </div>
-      <main > 
+      <main> 
         <RegistrationForm />
       </main>
     </>

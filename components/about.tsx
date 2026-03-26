@@ -7,16 +7,16 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Us</h2>
-            <p className="text-gray-600 mb-4 text-lg">
-              MusicMonthly is a community-driven program designed for musicians of all levels. 
+            <p className="text-gray-600 mb-4 text-md">
+              Music Monthly is a community-driven program designed for musicians of all levels. 
               We provide a platform to learn, collaborate, and perform in a supportive environment.
             </p>
-            <p className="text-gray-600 mb-4 text-lg">
+            <p className="text-gray-600 mb-4 text-md">
               Every month, we bring together vocalists, instrumentalists, and producers for workshops, 
               jam sessions, and open mic nights. Our mission is to nurture musical talent and build 
               lasting connections.
             </p>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 text-md">
               Whether you're a beginner or a pro, you'll find your place here. Join us and let your 
               music be heard!
             </p>

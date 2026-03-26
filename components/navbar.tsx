@@ -131,7 +131,7 @@ export default function Navbar() {
         {/* Optional: Social Links in Menu */}
         <div className="absolute bottom-8 left-0 right-0 px-4">
           <div className="border-t border-gray-800 pt-4">
-            <p className="text-xs text-gray-500 text-center">MusicMonthly © 2024</p>
+            <p className="text-xs text-gray-500 text-center">MusicMonthly © 2026</p>
           </div>
         </div>
       </div>

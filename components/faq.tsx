@@ -5,24 +5,28 @@ import { ChevronDown } from 'lucide-react'
 
 const faqs = [
   {
-    question: 'Who can join the program?',
-    answer: 'Anyone with a passion for music! Whether you\'re a beginner or a professional, you\'re welcome to join.',
+    question: '⁠How long will the meeting last...?',
+    answer: 'Every last Saturday for 1 year.',
   },
   {
-    question: 'Do I need to bring my own instrument?',
-    answer: 'We recommend bringing your own instrument, but we do have some basic instruments available for use during sessions.',
+    question: 'What Time and Duration?',
+    answer: '8pm - 9:15pm',
   },
   {
-    question: 'How much does it cost?',
-    answer: 'The program is free for the first month. After that, it\'s $20/month to cover venue and workshop costs.',
+    question: 'What is the purpose of the Worship School.',
+    answer: 'Its a one year mentorship programe with Apostle DeJoe. For Music Ministers and any believer that desires to understand the concept of Worship beyond Music.',
   },
   {
-    question: 'What genres of music are covered?',
-    answer: 'We cover all genres! From classical to rock, jazz to electronic – our workshops are diverse.',
+    question:  'Is the Worship School Terminated after one year?',
+    answer: 'No. new students and people are enrolled and past students enter to other assignments.',
   },
   {
-    question: 'Can I join mid-month?',
-    answer: 'Absolutely! You can join at any time. We\'ll help you catch up with the current month\'s activities.',
+    question: 'Is it a Church that is running the Worship School?',
+    answer: 'No, The Worship School is powered by Music Ministers Prayer Network which Is under Apostle DeJoe Ministries.',
+  },
+  {
+    question: 'How do I join the Worship School?',
+    answer: 'You register online, providing the information needed. and a token of #10,000.',
   },
 ]
 
@@ -47,15 +51,15 @@ export default function FAQ() {
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none"
               >
-                <span className="text-lg font-medium text-gray-900">{faq.question}</span>
+                <span className="text-md font-medium text-gray-900">{faq.question}</span>
                 <ChevronDown
-                  className={`w-5 h-5 text-gray-500 transition-transform ${
+                  className={`w-5 h-5  text-gray-500 transition-transform ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
               </button>
               {openIndex === index && (
-                <div className="px-6 pb-4 text-gray-600">{faq.answer}</div>
+                <div className="px-6 pb-4 text-sm text-gray-600">{faq.answer}</div>
               )}
             </div>
           ))}
