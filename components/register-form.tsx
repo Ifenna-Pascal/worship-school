@@ -15,7 +15,6 @@ export default function RegistrationForm() {
     comments: '',
   })
 
-  const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -61,10 +60,8 @@ export default function RegistrationForm() {
       throw new Error(`Submit failed: ${res.status}`);
     }
 
-    // ✅ Success
     toast.success('Message sent successfully');
     router.push('/success')
-    setSubmitted(true);
   } catch (err: any) {
     console.error(err);
     toast.error(err.message || 'Something went wrong!!');
@@ -72,15 +69,6 @@ export default function RegistrationForm() {
     setLoading(false);
   }
 };
-
-  if (submitted) {
-    return (
-      <div className="max-w-md mx-auto p-8 bg-green-50  text-center">
-        <h3 className="text-2xl font-bold text-green-700 mb-8">Thank You!</h3>
-        <p className="text-green-600">Your registration has been received. We'll be in touch soon!</p>
-      </div>
-    )
-  }
 
   return (
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-white py-8 px-4  shadow-lg">

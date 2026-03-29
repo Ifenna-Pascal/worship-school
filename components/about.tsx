@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import aboutImage from '@/app/images/mmpn.jpeg'
 
 export default function About() {
   return (
@@ -8,25 +9,24 @@ export default function About() {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Us</h2>
             <p className="text-gray-600 mb-4 text-md">
-              Music Monthly is a community-driven program designed for musicians of all levels. 
-              We provide a platform to learn, collaborate, and perform in a supportive environment.
+              Music Ministers Prayers Network is a ministry under Apostle De-Joe's Ministries. 
             </p>
             <p className="text-gray-600 mb-4 text-md">
-              Every month, we bring together vocalists, instrumentalists, and producers for workshops, 
-              jam sessions, and open mic nights. Our mission is to nurture musical talent and build 
-              lasting connections.
+              Our assignment is to Awaken The End Time Music Ministers.
+              The Worship School holds from the <b>April 18TH - June 20TH</b> with Apostle De-Joe. 
+              For Music Ministers and any believer that desires to understand the concept of Worship and how to do Music God's way.
+
             </p>
             <p className="text-gray-600 text-md">
-              Whether you're a beginner or a pro, you'll find your place here. Join us and let your 
-              music be heard!
+              Join this move and be positioned to what God is doing in this End time.
             </p>
           </div>
-          <div className="relative h-80 md:h-96 rounded-xl overflow-hidden shadow-xl">
+          <div className="relative h-80 md:h-98 rounded-xl overflow-hidden shadow-xl">
             <Image
-              src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              src={aboutImage}
               alt="Musicians playing together"
               fill
-              className="object-cover"
+              className="object-fill"
             />
           </div>
         </div>

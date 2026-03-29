@@ -1,23 +1,25 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ChevronDown } from 'lucide-react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const faqs = [
   {
     question: '⁠How long will the meeting last...?',
-    answer: 'Every last Saturday for 1 year.',
+    answer: 'Every last Saturday from April 18TH - June 20TH.',
   },
   {
     question: 'What Time and Duration?',
-    answer: '8pm - 9:15pm',
+    answer: '10am - 11:15am',
   },
   {
     question: 'What is the purpose of the Worship School.',
     answer: 'Its a one year mentorship programe with Apostle DeJoe. For Music Ministers and any believer that desires to understand the concept of Worship beyond Music.',
   },
   {
-    question:  'Is the Worship School Terminated after one year?',
+    question: 'Is the Worship School Terminated after the duration?',
     answer: 'No. new students and people are enrolled and past students enter to other assignments.',
   },
   {
@@ -26,12 +28,21 @@ const faqs = [
   },
   {
     question: 'How do I join the Worship School?',
-    answer: 'You register online, providing the information needed. and a token of #10,000.',
+    answer: 'You register online, providing the information needed. and a token of ₦10,000 (10 USD)',
   },
 ]
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 80,
+    })
+  }, [])
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -40,20 +51,28 @@ export default function FAQ() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        <h2
+          className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12"
+          data-aos="fade-up"
+        >
           Frequently Asked Questions
         </h2>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="border border-gray-200 rounded-lg">
+            <div
+              key={index}
+              className="border border-gray-200 rounded-lg"
+              data-aos="fade-up"
+              data-aos-delay={index * 80}
+            >
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex justify-between items-center px-6 py-4 text-left focus:outline-none"
               >
                 <span className="text-md font-medium text-gray-900">{faq.question}</span>
                 <ChevronDown
-                  className={`w-5 h-5  text-gray-500 transition-transform ${
+                  className={`w-5 h-5 text-gray-500 transition-transform ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />

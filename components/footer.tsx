@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">MMPN</h3>
             <p className="text-gray-400">
-              Bringing musicians together every month to create, learn, and perform.
+               Our assignment is to Awaken The End Time Music Ministers.
             </p>
           </div>
 
