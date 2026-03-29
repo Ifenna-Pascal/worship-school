@@ -23,7 +23,7 @@ export default function SuccessPage() {
     <div className="py-6 px-4">
       <h2 className="text-xl text-gray-700 mt-4 font-bold mb-2 ">Make your payments</h2>
       <p className="text-[14px] leading-5 md:text-xl text-gray-700  max-w-3xl mx-auto">complete your registration by making payments to the account details below, ensure to send your payment reciept to this contact below via whatsApp 
-        <a href="https://wa.me/2348069315735" target="_blank" className="ml-2 text-green-700">
+        <a href="https://wa.me/2348032827933" target="_blank" className="ml-2 text-green-700">
           +234-806-931-5735
         </a>
       </p>

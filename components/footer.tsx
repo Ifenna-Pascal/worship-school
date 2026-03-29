@@ -32,15 +32,15 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>hello@musicmonthly.com</li>
-              <li>(555) 123-4567</li>
-              <li>123 Music Ave, Nashville, TN</li>
+              <li>humbleemmanuel23@gmail.com</li>
+              <li>08032827933</li>
+              <li>No 17 Ogunbandejo Shomolu Lagos</li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition">
                 <FaFacebook size={24} />
               </a>
@@ -48,7 +48,7 @@ export default function Footer() {
               <a href="#" className="text-gray-400 hover:text-white transition">
                 <FaYoutube size={24} />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 
