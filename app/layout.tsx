@@ -14,8 +14,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Monthly Music Program',
-  description: 'Join our monthly music program and showcase your talent',
+  title: 'Music Ministers Pray Network.',
+  description: "For Music Ministers and any believer that desires to understand the concept of Worship and how to do Music God's way.",
 }
 
 export default function RootLayout({
