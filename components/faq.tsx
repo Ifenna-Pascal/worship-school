@@ -7,28 +7,28 @@ import 'aos/dist/aos.css'
 
 const faqs = [
   {
-    question: '⁠How long will the meeting last...?',
-    answer: 'Every last Saturday from April 18TH - June 20TH.',
+    question: 'How long will the meeting last...?',
+    answer: 'Every Saturday, starting from April 18TH - June 20TH, 2026',
   },
   {
     question: 'What Time and Duration?',
-    answer: '10am - 11:15am',
+    answer: 'he Time is 10:00am - 11:30am prompt, for the period of 2 months',
   },
   {
     question: 'What is the purpose of the Worship School.',
-    answer: 'Its a one year mentorship programe with Apostle DeJoe. For Music Ministers and any believer that desires to understand the concept of Worship beyond Music.',
+    answer: "It's a 2 months mentorship programme with Apostle DeJoe, for Music Ministers and any believer that desires to understand the concept of Worship beyond Music.",
   },
   {
     question: 'Is the Worship School Terminated after the duration?',
-    answer: 'No. new students and people are enrolled and past students enter to other assignments.',
+    answer: 'No! New people / students are enrolled, while past students enter to other assignments.',
   },
   {
     question: 'Is it a Church that is running the Worship School?',
-    answer: 'No, The Worship School is powered by Music Ministers Prayer Network which Is under Apostle DeJoe Ministries.',
+    answer: "No! The Worship School is powered by Music Ministers Prayer Network (MMPN), which is under Apostle DeJoe Ministries.",
   },
   {
     question: 'How do I join the Worship School?',
-    answer: 'You register online, providing the information needed. and a token of ₦10,000 (10 USD)',
+    answer: "You register online, providing your personal data, and other information needed, with a token of ₦10,000 (10 USD)",
   },
 ]
 

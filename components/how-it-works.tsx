@@ -27,7 +27,7 @@ const steps = [
     description: (
       <span>
         Send the receipt of your payment confirmation to the{' '}
-        <a href="https://wa.me/2348032827933" target="_blank" className="ml-2 text-green-700">
+        <a href="https://wa.me/2348069315735" target="_blank" className="ml-2 text-green-700">
           +234-806-931-5735
         </a>{' '}
         on WhatsApp for confirmation
