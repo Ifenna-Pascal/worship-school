@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FaFacebook, FaYoutube } from 'react-icons/fa'
+import { FaFacebook, FaTelegram, FaYoutube } from 'react-icons/fa'
 
 export default function Footer() {
   return (
@@ -40,15 +40,11 @@ export default function Footer() {
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
-            {/* <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition">
-                <FaFacebook size={24} />
+            <div className="flex space-x-4">
+              <a href="https://t.me/+5DsLyLkRz-A2Mzg0" target='_blank' className="text-gray-400 hover:text-white transition">
+                <FaTelegram size={24} />
               </a>
-            
-              <a href="#" className="text-gray-400 hover:text-white transition">
-                <FaYoutube size={24} />
-              </a>
-            </div> */}
+            </div>
           </div>
         </div>
 
