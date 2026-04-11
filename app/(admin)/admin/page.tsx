@@ -133,7 +133,8 @@ const RegisteredUsers = () => {
                                     <td className="p-2">
                                         <button
                                             onClick={() => togglePaymentStatus(user.email, user.firstName, user.lastName, user.status)}
-                                            className={`${user.status === 'Paid' ? 'bg-red-500' : 'bg-green-500'} p-2 px-4 text-[13px] cursor-pointer text-white`}
+                                            className={`${user.status === 'paid' ? 'bg-red-500' : 'bg-green-500'} p-2 px-4 text-[13px] cursor-pointer text-white`}
+                                            disabled={user.status === 'paid'}
                                         >
                                             {loadingStatus && id === user.email ? 'Loading...' : `${user.status === 'paid' ? 'Revoke' : 'Pay Now'}`}
                                         </button>
