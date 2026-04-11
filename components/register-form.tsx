@@ -1,11 +1,12 @@
 'use client'
 
+import { BASE_URL } from '@/utils/config';
 import { emailExists, generateRandomToken } from '@/utils/functions';
+import { states } from '@/utils/states';
 import { useRouter } from 'next/navigation';
 import { SyntheticEvent, useState } from 'react'
 import { toast } from 'sonner';
 
-const BASE_URL = 'https://sheetdb.io/api/v1/z2q6jhtwj2yc3'
 export default function RegistrationForm() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -13,6 +14,7 @@ export default function RegistrationForm() {
     email: '',
     phone: '',
     comments: '',
+    location: ''
   })
 
   const [loading, setLoading] = useState(false);
@@ -29,7 +31,7 @@ export default function RegistrationForm() {
     // ✅ Check if email exists
     const info = await emailExists(
       formData.email,
-      BASE_URL 
+      BASE_URL
     );
 
     if (info) {
@@ -49,7 +51,7 @@ export default function RegistrationForm() {
         body: JSON.stringify({
           ...formData,
           id: Date.now(), 
-          status: 'unPaid',
+          status: 'unpaid',
           date: new Date().toDateString(),
           time: new Date().toLocaleTimeString(),
         }),
@@ -83,7 +85,7 @@ export default function RegistrationForm() {
           required
           value={formData.firstName}
           onChange={handleChange}
-          className="w-full px-4 py-2 h-12.5 border border-gray-300 rounded-md  focus:ring-2 focus:ring-gray-400 focus:outline-none focus:border-transparent"
+          className="w-full px-4 py-2 h-12.5 border text-gray-800 border-gray-300 rounded-md  focus:ring-2 focus:ring-gray-400 focus:outline-none focus:border-transparent"
         />
       </div>
 
@@ -98,7 +100,7 @@ export default function RegistrationForm() {
           required
           value={formData.lastName}
           onChange={handleChange}
-          className="w-full px-4 py-2 h-12.5 border border-gray-300 rounded-md  focus:ring-2 focus:ring-gray-400 focus:outline-none focus:border-transparent"
+          className="w-full px-4 py-2 h-12.5 border text-gray-800 border-gray-300 rounded-md  focus:ring-2 focus:ring-gray-400 focus:outline-none focus:border-transparent"
         />
       </div>
 
@@ -114,7 +116,7 @@ export default function RegistrationForm() {
           required
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-2 h-12.5 border border-gray-300 rounded-md  focus:ring-2 focus:ring-gray-400 focus:outline-none focus:border-transparent"
+          className="w-full px-4 py-2 h-12.5 border text-gray-800 border-gray-300 rounded-md  focus:ring-2 focus:ring-gray-400 focus:outline-none focus:border-transparent"
         />
       </div>
 
@@ -128,9 +130,29 @@ export default function RegistrationForm() {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="w-full px-4 py-2 h-12.5 border border-gray-300 rounded-md  focus:ring-2 focus:ring-gray-400 focus:outline-none focus:border-transparent"
+          className="w-full px-4 py-2 h-12.5 border text-gray-800 border-gray-300 rounded-md  focus:ring-2 focus:ring-gray-400 focus:outline-none focus:border-transparent"
         />
       </div>
+      <div className="mb-8">
+      <label htmlFor="state-select" className="block text-gray-700 font-medium mb-2">
+        Select State
+      </label>
+      <select
+        id="state-select"
+        className="w-full px-4 py-2 h-12.5 border text-gray-800 border-gray-300 rounded-md  focus:ring-2 focus:ring-gray-400 focus:outline-none focus:border-transparent"
+        defaultValue=""
+        value={formData.location}
+        name='location'
+        onChange={handleChange}
+      >
+        <option value="" disabled>-- Select a state --</option>
+        {states.map((state) => (
+          <option key={state} value={state}>
+            {state}
+          </option>
+        ))}
+      </select>
+    </div>
       <div className="mb-8">
         <label htmlFor="comments" className="block text-gray-700 font-medium mb-2">
           Additional Comments
@@ -141,7 +163,7 @@ export default function RegistrationForm() {
           rows={4}
           value={formData.comments}
           onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md  focus:ring-2 focus:ring-gray-400 focus:outline-none focus:border-transparent"
+          className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-md  focus:ring-2 focus:ring-gray-400 focus:outline-none focus:border-transparent"
         />
       </div>
 
